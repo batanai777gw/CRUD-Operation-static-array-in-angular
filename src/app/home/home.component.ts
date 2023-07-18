@@ -13,7 +13,7 @@ export class HomeComponent {
   selectedStudentIndex = 0;
 
   //array of students
-  studentArray: string[] = ["John","James","Junior", "Batanai"];
+  studentArray: string[] = [];
 
   constructor() {}
 
