@@ -9,7 +9,7 @@ export class HomeComponent {
 
   StudentName = "";
 
-  selectedStudent:any = null;
+  selectedStudent = null;
   //an array of students
   StudentArray : string[] = ["John","James","Junior", "Batanai"];
 
@@ -24,17 +24,22 @@ export class HomeComponent {
     alert("Student added successfully")
   }
 
+    //method for deleting student name
+
   deleteStudent(i: any) {
    if(confirm("Are you sure you want to delete")){
     this.StudentArray.splice(i,1);
    }
   }
 
+    //method for selecting student name
+
   selectStudent(i: any){
     this.selectStudent = i;
     this.StudentName = this.StudentArray[i];
     }
   
+    //method for editing student name
   EditStudent(){
     this.StudentArray[this.selectedStudent] = this.selectedStudent;
     this.selectedStudent = null;
