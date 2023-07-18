@@ -5,17 +5,17 @@
     <table>
         <tr>
         <td class="label">Enter Student Name:</td>
-        <td><input type="text" class="text" [(ngModel)]="StudentName" /></td>
+        <td><input type="text" class="text" [(ngModel)]="studentName" /></td>
     </tr>
     <tr>
-        <td colspan="1" align="center"><input type="button" value="Add Student" (click)="AddStudent()" /></td>
-        <td colspan="2" align="center"><input type="button" value="Edit Student" /></td> <!--(click)="EditStudent()-->
+        <td colspan="1" align="center"><input type="button" value="Add Student" (click)="addStudent()" /></td>
+        <td colspan="2" align="center"><input type="button" value="Edit Student" (click)="editStudent()"/></td>
     </tr>
 </table>
 </div>
 <div class="table-container">
     <table class="table table-bordered">
-        <tr *ngFor="let stu of StudentArray; let i = index"> <!--looping through the array of students-->
+        <tr *ngFor="let stu of studentArray; let i = index"> <!--looping through the array of students-->
             <td>{{ stu }}</td>
             <input type="button" (click)="selectStudent(i)" class="btn btn-warning edit-btn" value="Edit" />
             <input type="button" (click)="deleteStudent(i)" class="btn btn-danger del-btn" value="Delete" />
