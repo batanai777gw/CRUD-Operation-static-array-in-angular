@@ -1,0 +1,18 @@
+<table>
+    <tr>
+        <td>Enter Roll Number</td>
+        <td>:</td>
+        <td><input type="text" [(ngModel)]="StudentName"/></td>
+    </tr>
+    <tr>
+        <td colspan="3" align="center"><input type="button" value="Add Student"
+            (click)="AddStudent()"
+            /></td>
+    </tr>
+</table>
+
+<table border="1">
+    <tr *ngFor="let stu of StudentArray">
+        <td>{{ stu }}</td>
+    </tr>
+</table>
