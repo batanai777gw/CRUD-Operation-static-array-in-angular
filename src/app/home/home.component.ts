@@ -9,9 +9,9 @@ export class HomeComponent {
 
   StudentName = "";
 
-  selectedStudent = null;
+  selectedStudent:any = null;
   //an array of students
-  StudentArray : string[] = ["student1", "student2", "student3" ];
+  StudentArray : string[] = ["John","James","Junior", "Batanai"];
 
   constructor() {}
 
@@ -36,7 +36,7 @@ export class HomeComponent {
     }
   
   EditStudent(){
-    this.StudentArray[this.selectedStudent] = this.StudentName;
+    this.StudentArray[this.selectedStudent] = this.selectedStudent;
     this.selectedStudent = null;
   }
 }

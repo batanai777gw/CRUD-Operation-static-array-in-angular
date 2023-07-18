@@ -1,19 +1,24 @@
-<table>
-    <tr>
-        <td>Enter Roll Number</td>
-        <td>:</td>
-        <td><input type="text" [(ngModel)]="StudentName" /></td>
+<div class="header">
+    <h1>CRUD operations on Array</h1>
+</div>
+<div class="container">
+    <table>
+        <tr>
+        <td class="label">Enter Student Name:</td>
+        <td><input type="text" class="text" [(ngModel)]="StudentName" /></td>
     </tr>
     <tr>
         <td colspan="1" align="center"><input type="button" value="Add Student" (click)="AddStudent()" /></td>
-        <td colspan="2" align="center"><input type="button" value="Edit Student" (click)="EditStudent()" /></td>
+        <td colspan="2" align="center"><input type="button" value="Edit Student" /></td> <!--(click)="EditStudent()-->
     </tr>
 </table>
-
-<table class="table table-bordered">
-    <tr *ngFor="let stu of StudentArray; let i = index"> <!--looping through the array of students-->
-        <td>{{ stu }}</td>
-        <input type="button" (click)="selectStudent(i)" class="btn btn-warning" value="Edit" />
-        <input type="button" (click)="deleteStudent(i)" class="btn btn-danger" value="Delete" />
-    </tr>
-</table>
+</div>
+<div class="table-container">
+    <table class="table table-bordered">
+        <tr *ngFor="let stu of StudentArray; let i = index"> <!--looping through the array of students-->
+            <td>{{ stu }}</td>
+            <input type="button" (click)="selectStudent(i)" class="btn btn-warning edit-btn" value="Edit" />
+            <input type="button" (click)="deleteStudent(i)" class="btn btn-danger del-btn" value="Delete" />
+        </tr>
+    </table>
+</div>
